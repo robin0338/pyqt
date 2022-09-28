@@ -9,16 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import Ui_Update
 import sys
 
 class Ui_MainWindow(object):
-    def update_window(self):
-        self.update = QtWidgets.QMainWindow()
-        self.ui = Ui_Update.Ui_UpdateWindow()
-        self.ui.setupUi(self.update)
-        self.update.show()
-
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(905, 508)
@@ -39,7 +32,7 @@ class Ui_MainWindow(object):
         self.menuFile.addAction(self.actionupdate)
         self.menubar.addAction(self.menuFile.menuAction())
 
-        self.actionupdate.triggered.connect(self.update_window) # type: ignore
+
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)  
