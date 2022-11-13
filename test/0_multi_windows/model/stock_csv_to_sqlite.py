@@ -48,11 +48,14 @@ def cre_db(sel_year):
         dates_list.append(os.path.basename(files).replace('.csv',''))
         pd.read_csv(files, thousands=r',').to_sql(os.path.basename(files).replace('.csv',''),db,if_exists='replace')
     #read sql database we just create, then append date table to last dateframe column.
-    total_df = pd.DataFrame()
+    total_df = []
     for date in dates_list:
         df = pd.read_sql(con = db, sql = 'SELECT * FROM' + '"' + date + '"')
         df['Date'] = date
-        total_df = total_df.append(df)
+        total_df.append(df)
+
+    #total_df = pd.DataFrame()   
+    total_df = pd.concat(total_df)
 
     #Create second database for reorder.
     dbname_2 = db_path + sel_year + '_order' + '.db'
@@ -72,12 +75,12 @@ def cre_db(sel_year):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 2:
         print(len(sys.argv))
         print("Please enter date!!")
     else:    
-        for x in range(int(sys.argv[1]),int(sys.argv[2])+1):
-            cre_db(str(x))  
+        #for x in range(int(sys.argv[1]),int(sys.argv[2])+1):
+        cre_db(sys.argv[1])  
         
 
 
