@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import QFileDialog, QMessageBox, QDialog, QActionGroup
 from PyQt5.QtCore import Qt
 from pathlib import Path
 from gui.Ui_Stock import Ui_MainWindow
-from gui.Ui_Update import Ui_UpdateWindow
 
 
 
@@ -19,11 +18,12 @@ class Ctr_Main():
         window.show()
         sys.exit(app.exec_())
 
-    def update_window(self):
-        self.update = QtWidgets.QMainWindow()
-        self.ui = Ui_UpdateWindow()
-        self.ui.setupUi(self.update)
-        self.update.show()
-
     def __initGUI(self, window):
-        self.objGUI.actionupdate.triggered.connect(self.update_window) # type: ignore  
+        self.objGUI.actionupdate.triggered.connect(self.__setUpdate) # type: ignore  
+
+    def __setUpdate(self):
+        from control.ctr_update import Ctr_Update
+        self.UpWin = Ctr_Update()
+        self.UpWin.setFixedSize(self.UpWin.size())
+        self.UpWin.show()
+

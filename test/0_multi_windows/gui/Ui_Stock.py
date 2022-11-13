@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/Program/0_pyqt5/test/Stock.ui'
+# Form implementation generated from reading ui file 'f:\1_python\pyqt\test\0_multi_windows\gui\Stock.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -9,17 +9,17 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(905, 508)
+        MainWindow.resize(850, 479)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 905, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 850, 22))
         self.menubar.setObjectName("menubar")
         self.menuFile = QtWidgets.QMenu(self.menubar)
         self.menuFile.setObjectName("menuFile")
@@ -32,23 +32,11 @@ class Ui_MainWindow(object):
         self.menuFile.addAction(self.actionupdate)
         self.menubar.addAction(self.menuFile.menuAction())
 
-
-
         self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)  
-
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.menuFile.setTitle(_translate("MainWindow", "File"))
         self.actionupdate.setText(_translate("MainWindow", "update"))
-
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    Mainwindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(Mainwindow)   
-    Mainwindow.show()
-    sys.exit(app.exec_())
-
