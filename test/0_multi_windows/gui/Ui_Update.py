@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/Program/0_pyqt5/test/0_multi_windows/Update.ui'
+# Form implementation generated from reading ui file 'f:\1_python\pyqt\test\0_multi_windows\gui\Update.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_UpdateWindow(object):
     def setupUi(self, UpdateWindow):
         UpdateWindow.setObjectName("UpdateWindow")
-        UpdateWindow.resize(527, 160)
+        UpdateWindow.resize(527, 337)
         self.centralwidget = QtWidgets.QWidget(UpdateWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
@@ -32,6 +32,24 @@ class Ui_UpdateWindow(object):
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(210, 30, 101, 17))
         self.label_2.setObjectName("label_2")
+        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit.setGeometry(QtCore.QRect(70, 180, 391, 70))
+        self.textEdit.setObjectName("textEdit")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(210, 100, 101, 17))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(80, 100, 101, 17))
+        self.label_4.setObjectName("label_4")
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setGeometry(QtCore.QRect(330, 120, 131, 25))
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_3.setGeometry(QtCore.QRect(70, 120, 113, 25))
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_4.setGeometry(QtCore.QRect(200, 120, 113, 25))
+        self.lineEdit_4.setObjectName("lineEdit_4")
         UpdateWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(UpdateWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 527, 22))
@@ -47,6 +65,9 @@ class Ui_UpdateWindow(object):
     def retranslateUi(self, UpdateWindow):
         _translate = QtCore.QCoreApplication.translate
         UpdateWindow.setWindowTitle(_translate("UpdateWindow", "MainWindow"))
-        self.pushButton_2.setText(_translate("UpdateWindow", "StartUpdate"))
+        self.pushButton_2.setText(_translate("UpdateWindow", "StUpdate"))
         self.label.setText(_translate("UpdateWindow", "ex:1985-10-20"))
         self.label_2.setText(_translate("UpdateWindow", "ex:1985-10-20"))
+        self.label_3.setText(_translate("UpdateWindow", "ex:1990"))
+        self.label_4.setText(_translate("UpdateWindow", "ex:1985"))
+        self.pushButton_3.setText(_translate("UpdateWindow", "ToSql"))
